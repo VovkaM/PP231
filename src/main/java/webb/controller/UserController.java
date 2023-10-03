@@ -1,4 +1,4 @@
-package webb.Controller;
+package webb.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping
 public class UserController {
-
 
     private UserService service;
 
@@ -60,7 +59,6 @@ public class UserController {
         service.updateUser(user, Long.parseLong(id));
         return "redirect:/users";
     }
-
 
     @PostMapping("/del_user")
     public String deleteUser(@RequestParam(value = "id") String id) {
